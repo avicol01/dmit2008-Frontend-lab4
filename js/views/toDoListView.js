@@ -1,6 +1,7 @@
 import { toDoItemTemplate } from "/js/templates/toDoItemTemplate";
 import { subscribe } from "/js/models/toDoListModel";
 import { deleteToDoController } from "/js/controllers/deleteToDoController";
+import { updateToDoController } from "../controllers/updateToDoController";
 
 let view
 
@@ -29,5 +30,11 @@ function onHandleClick(e){
         case 'delete':
             deleteToDoController(e.target.dataset.uid)
             break
+        case 'edit':
+            //console.log(e.target.dataset.uid)
+            updateToDoController(e.target.dataset.uid)
+            break
+        default:
+            null
     }
 }
