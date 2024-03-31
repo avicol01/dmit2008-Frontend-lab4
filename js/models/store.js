@@ -14,11 +14,19 @@ const createStore = async (todos) => {
         return true
     }
 }
-
 const getStore = () => {
     return store
 }
-
+//** Task 3 **
+function addTostore(form) {
+    const newToDo = {
+       category: form.elements.category.value,
+       status: form.elements.status.value,
+       todo: form.elements.todo.value
+    };
+    database.ref('todos').push(newToDo);
+   }
+   
 const removeFromStore = (uid) => {
     store = store.filter((item) => item.uid !== uid)
     return store
@@ -30,4 +38,4 @@ const updateStore = (todo) => {
     return store
 }
 
-export {getStore, createStore, removeFromStore, updateStore}
+export {addTostore, getStore, createStore, removeFromStore, updateStore}

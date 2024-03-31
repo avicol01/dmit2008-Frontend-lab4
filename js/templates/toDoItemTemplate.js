@@ -40,7 +40,7 @@ function toDoItemTemplate({todo, category, status, uid}) {
 }
 
 function categoryStyles(category) {
-	const type = category.toLowerCase()
+	const type = category //.toLowerCase()
 	const styles = {
 		home: 'border-l-4 border-yellow-300/10 bg-gradient-to-r mb-2.5 from-white from-23% to-lime-200/20 to-90% shadow-sm shadow-zinc-200   rounded-md',
 		social: 'border-l-4 border-yellow-300/10  bg-gradient-to-r mb-2.5 from-white from-23%  to-yellow-200/20 to-90% shadow-sm shadow-zinc-200 rounded-md',
@@ -64,7 +64,7 @@ function textStyles(category) {
 }
 
 function headingStyles(category) {
-	const type = category.toLowerCase()
+	const type = category // .toLowerCase()
 	const styles = {
 		home: 'text-lime-950',
 		social: 'text-yellow-950',
